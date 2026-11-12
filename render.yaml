@@ -1,0 +1,27 @@
+databases:
+  - name: github-searcher-db
+    databaseName: githubsearcher
+    user: dbuser
+    plan: free
+
+services:
+  - type: web
+    name: github-repo-searcher
+    env: java
+    region: frankfurt
+    plan: free
+    buildCommand: "mvn clean package"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: github-searcher-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: github-searcher-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: github-searcher-db
+          property: password
