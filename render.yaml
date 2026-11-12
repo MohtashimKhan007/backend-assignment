@@ -7,11 +7,8 @@ databases:
 services:
   - type: web
     name: github-repo-searcher
-    env: java
-    region: frankfurt
+    env: docker
     plan: free
-    buildCommand: "mvn clean package"
-    startCommand: "java -jar target/*.jar"
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
