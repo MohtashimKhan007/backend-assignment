@@ -6,9 +6,9 @@ A production-ready Spring Boot backend application that interacts with the GitHu
 
 ## 🚀 Live Application & API Documentation
 
-- **Live Deployed API Base URL:** `https://<YOUR-RENDER-SERVICE-NAME>.onrender.com`
-- **Interactive Swagger UI:** `https://<YOUR-RENDER-SERVICE-NAME>.onrender.com/swagger-ui.html`
-- **OpenAPI JSON Spec:** `https://<YOUR-RENDER-SERVICE-NAME>.onrender.com/api-docs`
+- **Live Deployed API Base URL:** `https://github-repo-searcher-jqa5.onrender.com`
+- **Interactive Swagger UI:** `https://github-repo-searcher-jqa5.onrender.com/swagger-ui.html`
+- **OpenAPI JSON Spec:** `https://github-repo-searcher-jqa5.onrender.com/api-docs`
 
 *(For local execution, open: `http://localhost:8080/swagger-ui.html`)*
 
