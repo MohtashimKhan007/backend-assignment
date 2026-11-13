@@ -9,7 +9,12 @@ services:
     name: github-repo-searcher
     env: docker
     plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/github/repositories
     envVars:
+      - key: PORT
+        value: 8080
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
           name: github-searcher-db

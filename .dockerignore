@@ -1,0 +1,7 @@
+**/.git
+**/.idea
+**/target
+**/.mvn
+target
+backend-assignment/target
+*.md

@@ -1,6 +1,7 @@
 package com.mohtashim.backend_assignment.repository;
 
 import com.mohtashim.backend_assignment.entity.GithubRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,8 +17,7 @@ public interface GithubRepo extends JpaRepository<GithubRepository, Long> {
             "(:minStars IS NULL OR r.stars >= :minStars)")
     List<GithubRepository> findFilteredRepositories(
             @Param("language") String language,
-            @Param("minStars") Integer minStars
+            @Param("minStars") Integer minStars,
+            Sort sort
     );
 }
-
-
